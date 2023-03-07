@@ -3,11 +3,11 @@ from function import get_data
 
 
 def main():
-    VAL = 5
-    FILTERED_EMPTY_FROM = True
+    val = 5
+    filtered_empty_from = True
     data = get_data()
-    data = filter_data(data, FILTERED_EMPTY_FROM)
-    data = last_data(data, VAL)
+    data = filter_data(data, filtered_empty_from)
+    data = last_data(data, val)
     data = format_data(data)
     for row in data:
         print(row, end="\n\n")
