@@ -8,16 +8,16 @@ def get_data():
     return data_get
 
 
-def filter_data(data, FILTERED_EMPTY_FROM=False):
+def filter_data(data, filtered_empty_from=False):
     data = [x for x in data if "state" in x and x["state"] == 'EXECUTED']
-    if FILTERED_EMPTY_FROM:
+    if filtered_empty_from:
         data = [x for x in data if "from" in x]
     return data
 
 
-def last_data(data, VAL):
+def last_data(data, val):
     data = sorted(data, key=lambda x: x["date"], reverse=True)
-    return data[:VAL]
+    return data[:val]
 
 
 def format_data(data):
